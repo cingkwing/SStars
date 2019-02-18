@@ -5,51 +5,106 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingLeft="36dp"
+    android:paddingRight="36dp"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     tools:context="com.example.administrator.sstars.Activity_new">
 
     <EditText
         android:id="@+id/new_title"
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_margin="10dp"
+        android:layout_marginBottom="10dp"
         android:hint="标题"
         android:background="@drawable/shape_oneline"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="60sp"
-        android:padding="10dp">
-
-        <Switch
-            android:id="@+id/new_kind"
-            android:layout_width="100dp"
-            android:layout_height="45dp"
-            android:hint="事件"
-            android:layout_marginRight="20dp"
-            android:textSize="19sp"/>
-
-        <EditText
-            android:layout_width="100sp"
-            android:layout_height="45dp"
-            android:textSize="19sp"
-            android:hint="时间"
-            android:background="@drawable/shape_oneline"
-            android:id="@+id/editText" />
-
-    </LinearLayout>
 
     <EditText
         android:id="@+id/new_content"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_marginBottom="50dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/shape_oneline"/>
 
+    <RelativeLayout
+        android:id="@+id/new_startTime"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:hint="开始时间:"
+            android:textSize="18dp"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:hint="当前时间"
+            android:textSize="18dp"
+            android:gravity="center_vertical|center"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/new_endTime"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:hint="结束时间:"
+            android:textSize="18dp"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:hint="当前时间"
+            android:textSize="18dp"
+            android:gravity="center_vertical|center"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/new_alert"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textSize="18dp"
+        android:layout_marginBottom="10dp"
+        android:hint="在时间截止时提醒我"/>
+
+    <RelativeLayout
+        android:id="@+id/new_repeat"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:hint="重复:"
+            android:textSize="18dp"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:hint="否"
+            android:textSize="18dp"
+            android:gravity="center_vertical|center"/>
+
+    </RelativeLayout>
+
     <Button
+        android:id="@+id/new_submitButton"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
